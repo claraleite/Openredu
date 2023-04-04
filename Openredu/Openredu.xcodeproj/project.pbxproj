@@ -11,6 +11,8 @@
 		C17AC98229DBA1C3007BA935 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17AC98129DBA1C3007BA935 /* ContentView.swift */; };
 		C17AC98429DBA1C4007BA935 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C17AC98329DBA1C4007BA935 /* Assets.xcassets */; };
 		C17AC98729DBA1C4007BA935 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C17AC98629DBA1C4007BA935 /* Preview Assets.xcassets */; };
+		C17AC99029DBA3ED007BA935 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17AC98F29DBA3ED007BA935 /* HomeView.swift */; };
+		C17AC99229DBA3FE007BA935 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17AC99129DBA3FE007BA935 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		C17AC98129DBA1C3007BA935 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C17AC98329DBA1C4007BA935 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C17AC98629DBA1C4007BA935 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C17AC98F29DBA3ED007BA935 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C17AC99129DBA3FE007BA935 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				C17AC97F29DBA1C3007BA935 /* OpenreduApp.swift */,
 				C17AC98129DBA1C3007BA935 /* ContentView.swift */,
+				C17AC98F29DBA3ED007BA935 /* HomeView.swift */,
+				C17AC99129DBA3FE007BA935 /* ProfileView.swift */,
 				C17AC98329DBA1C4007BA935 /* Assets.xcassets */,
 				C17AC98529DBA1C4007BA935 /* Preview Content */,
 			);
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C17AC99229DBA3FE007BA935 /* ProfileView.swift in Sources */,
 				C17AC98229DBA1C3007BA935 /* ContentView.swift in Sources */,
+				C17AC99029DBA3ED007BA935 /* HomeView.swift in Sources */,
 				C17AC98029DBA1C3007BA935 /* OpenreduApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
