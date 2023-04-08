@@ -7,9 +7,11 @@
 
 import SwiftUI
 
-struct SubjectsModel {
+struct SubjectsModel: Identifiable {
     let id = UUID()
     var name: String
+    var numberOfModules: Int
+    var numberOfClasses: Int
     var goal: String
     var tags: [String]
     var content: [ContentModel]
