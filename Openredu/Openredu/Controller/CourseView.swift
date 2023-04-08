@@ -10,6 +10,7 @@ import SwiftUI
 struct CourseView: View {
     
     var courseInfo: EnvironmentCoursesModel
+    let logEnvironments = EnvironmentTypeModel.logEnvironments()
     
     var body: some View {
         GeometryReader { geometry in
@@ -37,7 +38,9 @@ struct CourseView: View {
                         .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
                     
                     VStack(spacing: geometry.size.height * 0.02) {
-                        
+                        ForEach(courseInfo.subjects) { item in
+                            SubjectsListView(title: item.name, numberOfModules: item.numberOfModules, numberOfClasses: item.numberOfClasses, nextView: SubjectView(subjectInfo: item), width: geometry.size.width * 0.85, height: geometry.size.height * 0.07)
+                        }
                     }
                     
                 }.navigationTitle(courseInfo.name)
@@ -59,6 +62,8 @@ struct CourseView_Previews: PreviewProvider {
             subjects: [
                 SubjectsModel(
                     name: "Introdução ao Git",
+                    numberOfModules: 1,
+                    numberOfClasses: 1,
                     goal: "Ajudá-lo a compreender os conceitos de controle de versão distribuido e começar a usar o Git. Conhça os coneitos basicos e fluxos de trabalho através de aulas passo-a-passo.",
                     tags: ["git", "controle de versão"],
                     content: [

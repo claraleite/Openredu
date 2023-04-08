@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentModel {
+struct ContentModel: Identifiable {
     let id = UUID()
     var name: String
     var numberOfClasses: Int

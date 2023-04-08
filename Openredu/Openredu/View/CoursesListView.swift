@@ -80,6 +80,8 @@ struct CoursesListModel_Previews: PreviewProvider {
             subjects: [
                 SubjectsModel(
                     name: "Introdução ao Git",
+                    numberOfModules: 1,
+                    numberOfClasses: 1,
                     goal: "Ajudá-lo a compreender os conceitos de controle de versão distribuido e começar a usar o Git. Conhça os coneitos basicos e fluxos de trabalho através de aulas passo-a-passo.",
                     tags: ["git", "controle de versão"],
                     content: [
@@ -90,6 +92,8 @@ struct CoursesListModel_Previews: PreviewProvider {
                 ),
                 SubjectsModel(
                     name: "Git no mercado de trabalho",
+                    numberOfModules: 2,
+                    numberOfClasses: 4,
                     goal: "Ajudá-lo a compreender os conceitos de controle de versão distribuido e começar a usar o Git. Conhça os coneitos basicos e fluxos de trabalho através de aulas passo-a-passo.",
                     tags: ["trabalho", "mercado"],
                     content: [
