@@ -69,41 +69,41 @@ struct CoursesListView: View {
     }
 }
 
-struct CoursesListModel_Previews: PreviewProvider {
-    static var previews: some View {
-        CoursesListView(title: "Desenvolvimento Web", numberOfSubjects: 2, hours: 180, nextView: CourseView(courseInfo: EnvironmentCoursesModel(
-            name: "Git",
-            numberOfSubjects: 2,
-            hours: 180,
-            description: "Curso sobre a ferramena de controle de versões distribuído, utilizado principalmente no desenvolvimento de software.",
-            responsable: ["Alex Sandro Gomes", "Luiz Claudio Bacellar"],
-            subjects: [
-                SubjectsModel(
-                    name: "Introdução ao Git",
-                    numberOfModules: 1,
-                    numberOfClasses: 1,
-                    goal: "Ajudá-lo a compreender os conceitos de controle de versão distribuido e começar a usar o Git. Conhça os coneitos basicos e fluxos de trabalho através de aulas passo-a-passo.",
-                    tags: ["git", "controle de versão"],
-                    content: [
-                        ContentModel(
-                            name: "Primeira aula de Introdução ao Git",
-                            numberOfClasses: 1, progress: 30)
-                    ]
-                ),
-                SubjectsModel(
-                    name: "Git no mercado de trabalho",
-                    numberOfModules: 2,
-                    numberOfClasses: 4,
-                    goal: "Ajudá-lo a compreender os conceitos de controle de versão distribuido e começar a usar o Git. Conhça os coneitos basicos e fluxos de trabalho através de aulas passo-a-passo.",
-                    tags: ["trabalho", "mercado"],
-                    content: [
-                    ContentModel(
-                        name: "Como pode ser útil?",
-                        numberOfClasses: 3,
-                        progress: 60)
-                    ]
-                )
-            ]
-        )), width: 360, height: 80)
-    }
-}
+//struct CoursesListModel_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CoursesListView(title: "Desenvolvimento Web", numberOfSubjects: 2, hours: 180, nextView: CourseView(courseInfo: EnvironmentCoursesModel(
+//            name: "Git",
+//            numberOfSubjects: 2,
+//            hours: 180,
+//            description: "Curso sobre a ferramena de controle de versões distribuído, utilizado principalmente no desenvolvimento de software.",
+//            responsable: ["Alex Sandro Gomes", "Luiz Claudio Bacellar"],
+//            subjects: [
+//                SubjectsModel(
+//                    name: "Introdução ao Git",
+//                    numberOfModules: 1,
+//                    numberOfClasses: 1,
+//                    goal: "Ajudá-lo a compreender os conceitos de controle de versão distribuido e começar a usar o Git. Conhça os coneitos basicos e fluxos de trabalho através de aulas passo-a-passo.",
+//                    tags: ["git", "controle de versão"],
+//                    content: [
+//                        ContentModel(
+//                            name: "Primeira aula de Introdução ao Git",
+//                            numberOfClasses: 1, progress: 30)
+//                    ]
+//                ),
+//                SubjectsModel(
+//                    name: "Git no mercado de trabalho",
+//                    numberOfModules: 2,
+//                    numberOfClasses: 4,
+//                    goal: "Ajudá-lo a compreender os conceitos de controle de versão distribuido e começar a usar o Git. Conhça os coneitos basicos e fluxos de trabalho através de aulas passo-a-passo.",
+//                    tags: ["trabalho", "mercado"],
+//                    content: [
+//                    ContentModel(
+//                        name: "Como pode ser útil?",
+//                        numberOfClasses: 3,
+//                        progress: 60)
+//                    ]
+//                )
+//            ]
+//        )), width: 360, height: 80)
+//    }
+//}

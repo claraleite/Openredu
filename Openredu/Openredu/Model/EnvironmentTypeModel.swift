@@ -11,7 +11,11 @@ struct EnvironmentTypeModel: Identifiable {
     let id = UUID()
     var title: String
     var description: String
+    var teachers: [MembersModel]
+    var tutors: [MembersModel]
+    var students: [MembersModel]
     var courses: [EnvironmentCoursesModel]
+    
 }
 
 

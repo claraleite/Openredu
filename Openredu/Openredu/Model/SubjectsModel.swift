@@ -14,5 +14,9 @@ struct SubjectsModel: Identifiable {
     var numberOfClasses: Int
     var goal: String
     var tags: [String]
+    var teachers: [MembersModel]
+    var tutors: [MembersModel]
+    var students: [MembersModel]
     var content: [ContentModel]
+    
 }

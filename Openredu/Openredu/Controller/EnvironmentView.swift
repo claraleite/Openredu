@@ -25,7 +25,7 @@ struct EnvironmentView: View {
                         }
                         
                         Spacer()
-                    }.navigationTitle("Ambientes")
+                    }.navigationTitle(Text("Ambientes"))
                     
                 }
             }
