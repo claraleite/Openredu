@@ -13,7 +13,10 @@ struct SubjectView: View {
 
     @State var selected = 1
     
+    let logProfile = ProfileModel.logProfile()
+    
     var subjectInfo: SubjectsModel
+    let logEnvironments = EnvironmentTypeModel.logEnvironments()
     
     var body: some View {
         
@@ -22,6 +25,12 @@ struct SubjectView: View {
                 VStack(alignment: .leading, spacing: geometry.size.height * 0.03) {
                     
                     HStack {
+                        
+                        Text(subjectInfo.name)
+                            .font(.system(size: 35, weight: .bold, design: .default))
+                            .multilineTextAlignment(.leading)
+                        
+                        Spacer()
 
                         Button {
                             showingSheet.toggle()
@@ -31,6 +40,7 @@ struct SubjectView: View {
                                 .foregroundColor(.accentColor)
 
                         }
+                        
 
                     }
                     
@@ -62,6 +72,7 @@ struct SubjectView: View {
                                     ForEach(subjectInfo.tags, id: \.self) { item in
                                         Text(item)
                                             .font(.system(size: 16, weight: .regular, design: .default))
+                                        
                                     }
                                 }
                             }
@@ -69,20 +80,30 @@ struct SubjectView: View {
                             Text("Conteúdo")
                                 .font(.system(size: 32, weight: .bold, design: .default))
                             
-//                            VStack(spacing: geometry.size.height * 0.02) {
-//                                ForEach(subjectInfo.content) { item in
-//                                    ContentListView(title: item.name, numberOfClasses: item.numberOfClasses, progress: item.progress, width: geometry.size.width * 0.85, height: geometry.size.height * 0.07)
-//                                }
-//                            }
+                            VStack(spacing: geometry.size.height * 0.02) {
+                                ForEach(subjectInfo.content) { item in
+                                    ContentListView(title: item.name, numberOfClasses: item.numberOfClasses, progress: Int(item.progress), width: geometry.size.width * 0.85, height: geometry.size.height * 0.07)
+                                }
+                            }
 
                             
                         }
+                    } else {
+                        
+                        VStack(spacing: -geometry.size.height * 0.35) {
+                            
+                            ForEach(logProfile.mural) { muralPost in
+                                MuralPostsView(imageName: muralPost.image, name: muralPost.name, time: muralPost.time, content: muralPost.content)
+                            }
+                        }
                     }
                     
-                }.padding()
+                }
+                
+                .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
                 
             }
-            .navigationTitle(Text(subjectInfo.name))
+            .navigationBarTitle(Text(""), displayMode: .inline)
             .sheet(isPresented: $showingSheet) {
                 InformationView(title: "Informações da disciplina", description: subjectInfo.goal, teachers: subjectInfo.teachers, tutors: subjectInfo.tutors, students: subjectInfo.students)
                     

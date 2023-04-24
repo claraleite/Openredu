@@ -46,10 +46,7 @@ struct ContentListView: View {
                             
                         }
                         
-                        Image(systemName: "chevron.forward")
-                            .frame(alignment: .trailing)
-                            .foregroundColor(Color.white)
-                            .font(Font.system(size: 20))
+                        
                     }
                     .frame(maxWidth: .infinity, minHeight: height)
                     .padding(20)
@@ -58,7 +55,7 @@ struct ContentListView: View {
                     
                     
                 }
-                .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+
                 .frame(maxWidth: .infinity)
 
     }

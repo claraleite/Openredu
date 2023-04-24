@@ -53,6 +53,6 @@ struct EnvironmentListView: View {
 //
 //struct EnvironmentListModel_Previews: PreviewProvider {
 //    static var previews: some View {
-//        EnvironmentListModel(title: "Universidade Federal de Pernambuco", nextView: EnvironmentDetailView(), width: 360, height: 80)
+//        EnvironmentListView(title: "Universidade Federal de Pernambuco", nextView: EnvironmentDetailView(), width: 360, height: 80)
 //    }
 //}

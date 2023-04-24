@@ -13,9 +13,7 @@ struct EnvironmentView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            
-            NavigationStack {
-                
+                            
                 ZStack {
                     
                     VStack(spacing: geometry.size.height * 0.02) {
@@ -25,10 +23,10 @@ struct EnvironmentView: View {
                         }
                         
                         Spacer()
-                    }.navigationTitle(Text("Ambientes"))
+                    }
                     
                 }
-            }
+            
         }
         
     }

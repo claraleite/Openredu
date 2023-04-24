@@ -23,6 +23,12 @@ struct CourseView: View {
                 VStack(alignment: .leading, spacing: geometry.size.height * 0.03) {
                     
                     HStack {
+                        
+                        Text(courseInfo.name)
+                            .font(.system(size: 35, weight: .bold, design: .default))
+                            .multilineTextAlignment(.leading)
+                        
+                        Spacer()
 
                         Button {
                             showingSheet.toggle()
@@ -32,9 +38,9 @@ struct CourseView: View {
                                 .foregroundColor(.accentColor)
 
                         }
-                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                        
 
-                    }
+                    }.padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
                     
                     Text(courseInfo.description)
                         .font(.system(size: 16, weight: .regular, design: .default))
@@ -65,7 +71,7 @@ struct CourseView: View {
                     
                 }
             }
-            .navigationTitle(Text(courseInfo.name))
+            .navigationBarTitle(Text(""), displayMode: .inline)
             .sheet(isPresented: $showingSheet) {
                 InformationView(title: "Informações do curso", description: courseInfo.description, teachers: courseInfo.teachers, tutors: courseInfo.tutors, students: courseInfo.students)
                     
