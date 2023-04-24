@@ -21,6 +21,12 @@ struct EnvironmentDetailView: View {
                 VStack(alignment: .leading, spacing: geometry.size.height * 0.02) {
                     
                     HStack {
+                        
+                        Text(environmentInfo.title)
+                            .font(.system(size: 35, weight: .bold, design: .default))
+                            .multilineTextAlignment(.leading)
+                        
+                        Spacer()
 
                         Button {
                             showingSheet.toggle()
@@ -30,9 +36,9 @@ struct EnvironmentDetailView: View {
                                 .foregroundColor(.accentColor)
 
                         }
-                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                        
 
-                    }
+                    }.padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
                     
                     Text(environmentInfo.description)
                         .font(.system(size: 16, weight: .regular, design: .default))
@@ -56,7 +62,7 @@ struct EnvironmentDetailView: View {
                 
                 
             }
-            .navigationTitle(environmentInfo.title)
+            .navigationBarTitle(Text(""), displayMode: .inline)
             .sheet(isPresented: $showingSheet) {
                 InformationView(title: "Informações do ambiente", description: environmentInfo.description, teachers: environmentInfo.teachers, tutors: environmentInfo.tutors, students: environmentInfo.students)
                     
