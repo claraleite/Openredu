@@ -14,6 +14,14 @@ extension EnvironmentTypeModel {
             EnvironmentTypeModel(
                 title: "Comunidade Openredu",
                 description: "A comunidade Openredu.org articula Designer, Programadores, Educadores e Empreendedores em torno de desenvolvimento e da difusão da rede dosical educacional Openredu.",
+                teachers: [MembersModel(image: "yver-bouckaert", name: "Yves Bouckaert")],
+                tutors: [MembersModel(image: "eduardo-moura", name: "Eduardo Moura")],
+                students: [MembersModel(image: "alessandra-pereira", name: "Alessandra Pereira"),
+                           MembersModel(image: "evaldo-junior", name: "Evaldo Júnior"),
+                           MembersModel(image: "felipe-vasconcelos", name: "Felipe Vasconcelos"),
+                           MembersModel(image: "pedro-moura", name: "Pedro Moura"),
+                           MembersModel(image: "luiza-oliveira", name: "Luiza Oliveira"),
+                           MembersModel(image: "antonia-ribeiro", name: "Antônia Ribeiro")],
                 courses: [
                     EnvironmentCoursesModel(
                         name: "Git",
@@ -21,13 +29,29 @@ extension EnvironmentTypeModel {
                         hours: 180,
                         description: "Curso sobre a ferramenta de controle de versões distribuído, utilizado principalmente no desenvolvimento de software.",
                         responsable: ["Alex Sandro Gomes", "Luiz Claudio Bacellar"],
+                        teachers: [MembersModel(image: "yver-bouckaert", name: "Yves Bouckaert")],
+                        tutors: [MembersModel(image: "eduardo-moura", name: "Eduardo Moura")],
+                        students: [MembersModel(image: "alessandra-pereira", name: "Alessandra Pereira"),
+                                   MembersModel(image: "evaldo-junior", name: "Evaldo Júnior"),
+                                   MembersModel(image: "felipe-vasconcelos", name: "Felipe Vasconcelos"),
+                                   MembersModel(image: "pedro-moura", name: "Pedro Moura"),
+                                   MembersModel(image: "luiza-oliveira", name: "Luiza Oliveira"),
+                                   MembersModel(image: "antonia-ribeiro", name: "Antônia Ribeiro")],
                         subjects: [
                             SubjectsModel(
                                 name: "Introdução ao Git",
                                 numberOfModules: 1,
                                 numberOfClasses: 1,
                                 goal: "Ajudá-lo a compreender os conceitos de controle de versão distribuido e começar a usar o Git. Conhça os coneitos basicos e fluxos de trabalho através de aulas passo-a-passo.",
-                                tags: ["git", "controle de versão"],
+                                tags: ["git,", "controle de versão"],
+                                teachers: [MembersModel(image: "yver-bouckaert", name: "Yves Bouckaert")],
+                                tutors: [MembersModel(image: "eduardo-moura", name: "Eduardo Moura")],
+                                students: [MembersModel(image: "alessandra-pereira", name: "Alessandra Pereira"),
+                                           MembersModel(image: "evaldo-junior", name: "Evaldo Júnior"),
+                                           MembersModel(image: "felipe-vasconcelos", name: "Felipe Vasconcelos"),
+                                           MembersModel(image: "pedro-moura", name: "Pedro Moura"),
+                                           MembersModel(image: "luiza-oliveira", name: "Luiza Oliveira"),
+                                           MembersModel(image: "antonia-ribeiro", name: "Antônia Ribeiro")],
                                 content: [
                                     ContentModel(
                                         name: "Primeira aula de Introdução ao Git",
@@ -38,8 +62,16 @@ extension EnvironmentTypeModel {
                                 name: "Git no mercado de trabalho",
                                 numberOfModules: 2,
                                 numberOfClasses: 4,
-                                goal: "Ajudá-lo a compreender os conceitos de controle de versão distribuido e começar a usar o Git. Conhça os coneitos basicos e fluxos de trabalho através de aulas passo-a-passo.",
-                                tags: ["trabalho", "mercado"],
+                                goal: "Explicar mais sobre como o Git pode ser importante no mercado de trabalho.",
+                                tags: ["trabalho,", "mercado"],
+                                teachers: [MembersModel(image: "yver-bouckaert", name: "Yves Bouckaert")],
+                                tutors: [MembersModel(image: "eduardo-moura", name: "Eduardo Moura")],
+                                students: [MembersModel(image: "alessandra-pereira", name: "Alessandra Pereira"),
+                                           MembersModel(image: "evaldo-junior", name: "Evaldo Júnior"),
+                                           MembersModel(image: "felipe-vasconcelos", name: "Felipe Vasconcelos"),
+                                           MembersModel(image: "pedro-moura", name: "Pedro Moura"),
+                                           MembersModel(image: "luiza-oliveira", name: "Luiza Oliveira"),
+                                           MembersModel(image: "antonia-ribeiro", name: "Antônia Ribeiro")],
                                 content: [
                                 ContentModel(
                                     name: "Como pode ser útil?",
@@ -56,6 +88,14 @@ extension EnvironmentTypeModel {
                         hours: 300,
                         description: "Curso sobre a ferramena de controle de versões distribuído, utilizado principalmente no desenvolvimento de software.",
                         responsable: ["Alex Sandro Gomes", "Luiz Claudio Bacellar"],
+                        teachers: [MembersModel(image: "yver-bouckaert", name: "Yves Bouckaert")],
+                        tutors: [MembersModel(image: "eduardo-moura", name: "Eduardo Moura")],
+                        students: [MembersModel(image: "alessandra-pereira", name: "Alessandra Pereira"),
+                                   MembersModel(image: "evaldo-junior", name: "Evaldo Júnior"),
+                                   MembersModel(image: "felipe-vasconcelos", name: "Felipe Vasconcelos"),
+                                   MembersModel(image: "pedro-moura", name: "Pedro Moura"),
+                                   MembersModel(image: "luiza-oliveira", name: "Luiza Oliveira"),
+                                   MembersModel(image: "antonia-ribeiro", name: "Antônia Ribeiro")],
                         subjects: []
                     ),
                     
@@ -65,6 +105,14 @@ extension EnvironmentTypeModel {
                         hours: 500,
                         description: "",
                         responsable: [],
+                        teachers: [MembersModel(image: "yver-bouckaert", name: "Yves Bouckaert")],
+                        tutors: [MembersModel(image: "eduardo-moura", name: "Eduardo Moura")],
+                        students: [MembersModel(image: "alessandra-pereira", name: "Alessandra Pereira"),
+                                   MembersModel(image: "evaldo-junior", name: "Evaldo Júnior"),
+                                   MembersModel(image: "felipe-vasconcelos", name: "Felipe Vasconcelos"),
+                                   MembersModel(image: "pedro-moura", name: "Pedro Moura"),
+                                   MembersModel(image: "luiza-oliveira", name: "Luiza Oliveira"),
+                                   MembersModel(image: "antonia-ribeiro", name: "Antônia Ribeiro")],
                         subjects: []
                     )
                 ]
@@ -73,6 +121,14 @@ extension EnvironmentTypeModel {
             EnvironmentTypeModel(
                 title: "Universidade Federal de Pernambuco",
                 description: "A comunidade Openredu.org articula Designer, Programadores, Educadores e Empreendedores em torno de desenvolvimento e da difusão da rede dosical educacional Openredu.",
+                teachers: [MembersModel(image: "yver-bouckaert", name: "Yves Bouckaert")],
+                tutors: [MembersModel(image: "eduardo-moura", name: "Eduardo Moura")],
+                students: [MembersModel(image: "alessandra-pereira", name: "Alessandra Pereira"),
+                           MembersModel(image: "evaldo-junior", name: "Evaldo Júnior"),
+                           MembersModel(image: "felipe-vasconcelos", name: "Felipe Vasconcelos"),
+                           MembersModel(image: "pedro-moura", name: "Pedro Moura"),
+                           MembersModel(image: "luiza-oliveira", name: "Luiza Oliveira"),
+                           MembersModel(image: "antonia-ribeiro", name: "Antônia Ribeiro")],
                 courses: [
                     EnvironmentCoursesModel(
                         name: "Git",
@@ -80,6 +136,14 @@ extension EnvironmentTypeModel {
                         hours: 180,
                         description: "Curso sobre a ferramena de controle de versões distribuído, utilizado principalmente no desenvolvimento de software.",
                         responsable: ["Alex Sandro Gomes", "Luiz Claudio Bacellar"],
+                        teachers: [MembersModel(image: "yver-bouckaert", name: "Yves Bouckaert")],
+                        tutors: [MembersModel(image: "eduardo-moura", name: "Eduardo Moura")],
+                        students: [MembersModel(image: "alessandra-pereira", name: "Alessandra Pereira"),
+                                   MembersModel(image: "evaldo-junior", name: "Evaldo Júnior"),
+                                   MembersModel(image: "felipe-vasconcelos", name: "Felipe Vasconcelos"),
+                                   MembersModel(image: "pedro-moura", name: "Pedro Moura"),
+                                   MembersModel(image: "luiza-oliveira", name: "Luiza Oliveira"),
+                                   MembersModel(image: "antonia-ribeiro", name: "Antônia Ribeiro")],
                         subjects: [
                             SubjectsModel(
                                 name: "Introdução ao Git",
@@ -87,6 +151,14 @@ extension EnvironmentTypeModel {
                                 numberOfClasses: 1,
                                 goal: "Ajudá-lo a compreender os conceitos de controle de versão distribuido e começar a usar o Git. Conhça os coneitos basicos e fluxos de trabalho através de aulas passo-a-passo.",
                                 tags: ["git", "controle de versão"],
+                                teachers: [MembersModel(image: "yver-bouckaert", name: "Yves Bouckaert")],
+                                tutors: [MembersModel(image: "eduardo-moura", name: "Eduardo Moura")],
+                                students: [MembersModel(image: "alessandra-pereira", name: "Alessandra Pereira"),
+                                           MembersModel(image: "evaldo-junior", name: "Evaldo Júnior"),
+                                           MembersModel(image: "felipe-vasconcelos", name: "Felipe Vasconcelos"),
+                                           MembersModel(image: "pedro-moura", name: "Pedro Moura"),
+                                           MembersModel(image: "luiza-oliveira", name: "Luiza Oliveira"),
+                                           MembersModel(image: "antonia-ribeiro", name: "Antônia Ribeiro")],
                                 content: [
                                     ContentModel(
                                         name: "Primeira aula de Introdução ao Git",
@@ -100,8 +172,16 @@ extension EnvironmentTypeModel {
                         name: "Desenvolvimento Web",
                         numberOfSubjects: 5,
                         hours: 300,
-                        description: "Curso sobre a ferramena de controle de versões distribuído, utilizado principalmente no desenvolvimento de software.",
+                        description: "Curso sobre as principais ferramentas e melhores maneiras de desenvolver para Web.",
                         responsable: ["Alex Sandro Gomes", "Luiz Claudio Bacellar"],
+                        teachers: [MembersModel(image: "yver-bouckaert", name: "Yves Bouckaert")],
+                        tutors: [MembersModel(image: "eduardo-moura", name: "Eduardo Moura")],
+                        students: [MembersModel(image: "alessandra-pereira", name: "Alessandra Pereira"),
+                                   MembersModel(image: "evaldo-junior", name: "Evaldo Júnior"),
+                                   MembersModel(image: "felipe-vasconcelos", name: "Felipe Vasconcelos"),
+                                   MembersModel(image: "pedro-moura", name: "Pedro Moura"),
+                                   MembersModel(image: "luiza-oliveira", name: "Luiza Oliveira"),
+                                   MembersModel(image: "antonia-ribeiro", name: "Antônia Ribeiro")],
                         subjects: []
                     ),
                     
@@ -111,6 +191,14 @@ extension EnvironmentTypeModel {
                         hours: 500,
                         description: "",
                         responsable: [],
+                        teachers: [MembersModel(image: "yver-bouckaert", name: "Yves Bouckaert")],
+                        tutors: [MembersModel(image: "eduardo-moura", name: "Eduardo Moura")],
+                        students: [MembersModel(image: "alessandra-pereira", name: "Alessandra Pereira"),
+                                   MembersModel(image: "evaldo-junior", name: "Evaldo Júnior"),
+                                   MembersModel(image: "felipe-vasconcelos", name: "Felipe Vasconcelos"),
+                                   MembersModel(image: "pedro-moura", name: "Pedro Moura"),
+                                   MembersModel(image: "luiza-oliveira", name: "Luiza Oliveira"),
+                                   MembersModel(image: "antonia-ribeiro", name: "Antônia Ribeiro")],
                         subjects: []
                     )
                 ]

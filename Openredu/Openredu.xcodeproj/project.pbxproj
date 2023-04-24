@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C11E2E2329F69F520013153C /* MembersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11E2E2229F69F520013153C /* MembersModel.swift */; };
+		C11E2E2529F6E0960013153C /* MembersProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11E2E2429F6E0960013153C /* MembersProfileView.swift */; };
+		C11E2E2729F6E29A0013153C /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11E2E2629F6E29A0013153C /* InformationView.swift */; };
 		C173004229DF422D00E7E35D /* EnvironmentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C173004129DF422D00E7E35D /* EnvironmentDetailView.swift */; };
 		C173004429DF433E00E7E35D /* EnvironmentCoursesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C173004329DF433E00E7E35D /* EnvironmentCoursesModel.swift */; };
 		C17AC98029DBA1C3007BA935 /* OpenreduApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17AC97F29DBA1C3007BA935 /* OpenreduApp.swift */; };
@@ -29,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C11E2E2229F69F520013153C /* MembersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersModel.swift; sourceTree = "<group>"; };
+		C11E2E2429F6E0960013153C /* MembersProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersProfileView.swift; sourceTree = "<group>"; };
+		C11E2E2629F6E29A0013153C /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		C173004129DF422D00E7E35D /* EnvironmentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentDetailView.swift; sourceTree = "<group>"; };
 		C173004329DF433E00E7E35D /* EnvironmentCoursesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentCoursesModel.swift; sourceTree = "<group>"; };
 		C17AC97C29DBA1C3007BA935 /* Openredu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Openredu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +114,7 @@
 				C1D44B6429E0691F008C2FEA /* SubjectsModel.swift */,
 				C1D44B6629E0698A008C2FEA /* ContentModel.swift */,
 				C17AC99729DBB4F7007BA935 /* EnvironmentTypeModel.swift */,
+				C11E2E2229F69F520013153C /* MembersModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -121,6 +128,7 @@
 				C173004129DF422D00E7E35D /* EnvironmentDetailView.swift */,
 				C1827D4A29E2293200A02922 /* SubjectView.swift */,
 				C1D44B7129E1B964008C2FEA /* CourseView.swift */,
+				C11E2E2629F6E29A0013153C /* InformationView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -132,6 +140,7 @@
 				C1827D4829E2281E00A02922 /* ContentListView.swift */,
 				C1D44B6829E06DE2008C2FEA /* CoursesListView.swift */,
 				C1D44B6F29E1B726008C2FEA /* SubjectsListView.swift */,
+				C11E2E2429F6E0960013153C /* MembersProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -211,8 +220,10 @@
 				C1827D4B29E2293200A02922 /* SubjectView.swift in Sources */,
 				C1827D4929E2281E00A02922 /* ContentListView.swift in Sources */,
 				C1D44B7229E1B964008C2FEA /* CourseView.swift in Sources */,
+				C11E2E2729F6E29A0013153C /* InformationView.swift in Sources */,
 				C17AC98229DBA1C3007BA935 /* ContentView.swift in Sources */,
 				C17AC99029DBA3ED007BA935 /* HomeView.swift in Sources */,
+				C11E2E2329F69F520013153C /* MembersModel.swift in Sources */,
 				C17AC99429DBA817007BA935 /* EnvironmentView.swift in Sources */,
 				C1D44B7029E1B726008C2FEA /* SubjectsListView.swift in Sources */,
 				C1D44B6B29E1AACD008C2FEA /* Placeholders.swift in Sources */,
@@ -220,6 +231,7 @@
 				C17AC99829DBB4F7007BA935 /* EnvironmentTypeModel.swift in Sources */,
 				C1D44B6729E0698A008C2FEA /* ContentModel.swift in Sources */,
 				C1D44B6529E0691F008C2FEA /* SubjectsModel.swift in Sources */,
+				C11E2E2529F6E0960013153C /* MembersProfileView.swift in Sources */,
 				C173004429DF433E00E7E35D /* EnvironmentCoursesModel.swift in Sources */,
 				C1D44B6929E06DE2008C2FEA /* CoursesListView.swift in Sources */,
 				C17AC99629DBAE74007BA935 /* EnvironmentListView.swift in Sources */,
@@ -359,6 +371,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -388,6 +401,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

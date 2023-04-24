@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SubjectView: View {
+    
+    @State private var showingSheet = false
+
     @State var selected = 1
     
     var subjectInfo: SubjectsModel
@@ -17,6 +20,20 @@ struct SubjectView: View {
         GeometryReader { geometry in
             ZStack(alignment: .top) {
                 VStack(alignment: .leading, spacing: geometry.size.height * 0.03) {
+                    
+                    HStack {
+
+                        Button {
+                            showingSheet.toggle()
+                        } label: {
+                            Image(systemName: "info.circle")
+                                .font(.system(size: 20))
+                                .foregroundColor(.accentColor)
+
+                        }
+
+                    }
+                    
                     Picker(selection: $selected, label: Text("Picker"), content: {
                         Text("Conteúdo").tag(1)
                         Text("Mural").tag(2)
@@ -65,6 +82,11 @@ struct SubjectView: View {
                 }.padding()
                 
             }
+            .navigationTitle(Text(subjectInfo.name))
+            .sheet(isPresented: $showingSheet) {
+                InformationView(title: "Informações da disciplina", description: subjectInfo.goal, teachers: subjectInfo.teachers, tutors: subjectInfo.tutors, students: subjectInfo.students)
+                    
+            }
             
         }
         
@@ -73,19 +95,19 @@ struct SubjectView: View {
     }
 }
 
-struct SubjectView_Previews: PreviewProvider {
-    static var previews: some View {
-        SubjectView(subjectInfo: SubjectsModel(
-            name: "Introdução ao Git",
-            numberOfModules: 1,
-            numberOfClasses: 1,
-            goal: "Ajudá-lo a compreender os conceitos de controle de versão distribuido e começar a usar o Git. Conhça os coneitos basicos e fluxos de trabalho através de aulas passo-a-passo.",
-            tags: ["git", "controle de versão"],
-            content: [
-                ContentModel(
-                    name: "Primeira aula de Introdução ao Git",
-                    numberOfClasses: 1, progress: 30)
-            ]
-        ))
-    }
-}
+//struct SubjectView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SubjectView(subjectInfo: SubjectsModel(
+//            name: "Introdução ao Git",
+//            numberOfModules: 1,
+//            numberOfClasses: 1,
+//            goal: "Ajudá-lo a compreender os conceitos de controle de versão distribuido e começar a usar o Git. Conhça os coneitos basicos e fluxos de trabalho através de aulas passo-a-passo.",
+//            tags: ["git", "controle de versão"],
+//            content: [
+//                ContentModel(
+//                    name: "Primeira aula de Introdução ao Git",
+//                    numberOfClasses: 1, progress: 30)
+//            ]
+//        ))
+//    }
+//}

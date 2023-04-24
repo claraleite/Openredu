@@ -14,6 +14,10 @@ struct EnvironmentCoursesModel: Identifiable {
     var hours: Int
     var description: String
     var responsable: [String]
+    var teachers: [MembersModel]
+    var tutors: [MembersModel]
+    var students: [MembersModel]
     var subjects: [SubjectsModel]
+    
 }
 

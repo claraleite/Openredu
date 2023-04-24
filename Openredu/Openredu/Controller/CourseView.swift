@@ -9,13 +9,33 @@ import SwiftUI
 
 struct CourseView: View {
     
+    @State private var showingSheet = false
+    
     var courseInfo: EnvironmentCoursesModel
     let logEnvironments = EnvironmentTypeModel.logEnvironments()
     
     var body: some View {
         GeometryReader { geometry in
             ZStack {
+                
+                
+                
                 VStack(alignment: .leading, spacing: geometry.size.height * 0.03) {
+                    
+                    HStack {
+
+                        Button {
+                            showingSheet.toggle()
+                        } label: {
+                            Image(systemName: "info.circle")
+                                .font(.system(size: 20))
+                                .foregroundColor(.accentColor)
+
+                        }
+                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+
+                    }
+                    
                     Text(courseInfo.description)
                         .font(.system(size: 16, weight: .regular, design: .default))
                         .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
@@ -43,7 +63,12 @@ struct CourseView: View {
                         }
                     }
                     
-                }.navigationTitle(courseInfo.name)
+                }
+            }
+            .navigationTitle(Text(courseInfo.name))
+            .sheet(isPresented: $showingSheet) {
+                InformationView(title: "Informações do curso", description: courseInfo.description, teachers: courseInfo.teachers, tutors: courseInfo.tutors, students: courseInfo.students)
+                    
             }
         }
         
@@ -51,28 +76,28 @@ struct CourseView: View {
     }
 }
 
-struct CourseView_Previews: PreviewProvider {
-    static var previews: some View {
-        CourseView(courseInfo: EnvironmentCoursesModel(
-            name: "Git",
-            numberOfSubjects: 2,
-            hours: 180,
-            description: "Curso sobre a ferramena de controle de versões distribuído, utilizado principalmente no desenvolvimento de software.",
-            responsable: ["Alex Sandro Gomes", "Luiz Claudio Bacellar"],
-            subjects: [
-                SubjectsModel(
-                    name: "Introdução ao Git",
-                    numberOfModules: 1,
-                    numberOfClasses: 1,
-                    goal: "Ajudá-lo a compreender os conceitos de controle de versão distribuido e começar a usar o Git. Conhça os coneitos basicos e fluxos de trabalho através de aulas passo-a-passo.",
-                    tags: ["git", "controle de versão"],
-                    content: [
-                        ContentModel(
-                            name: "Primeira aula de Introdução ao Git",
-                            numberOfClasses: 1, progress: 30)
-                    ]
-                )
-            ]
-        ))
-    }
-}
+//struct CourseView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CourseView(courseInfo: EnvironmentCoursesModel(
+//            name: "Git",
+//            numberOfSubjects: 2,
+//            hours: 180,
+//            description: "Curso sobre a ferramena de controle de versões distribuído, utilizado principalmente no desenvolvimento de software.",
+//            responsable: ["Alex Sandro Gomes", "Luiz Claudio Bacellar"],
+//            subjects: [
+//                SubjectsModel(
+//                    name: "Introdução ao Git",
+//                    numberOfModules: 1,
+//                    numberOfClasses: 1,
+//                    goal: "Ajudá-lo a compreender os conceitos de controle de versão distribuido e começar a usar o Git. Conhça os coneitos basicos e fluxos de trabalho através de aulas passo-a-passo.",
+//                    tags: ["git", "controle de versão"],
+//                    content: [
+//                        ContentModel(
+//                            name: "Primeira aula de Introdução ao Git",
+//                            numberOfClasses: 1, progress: 30)
+//                    ]
+//                )
+//            ]
+//        ))
+//    }
+//}
