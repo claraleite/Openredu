@@ -7,15 +7,38 @@
 
 import SwiftUI
 
+enum Tabs: String {
+    case Início
+    case Ambientes
+    case Configurações
+}
+
 struct ContentView: View {
+    
+    @State private var selection: Tabs = .Início
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack {
+            TabView(selection: $selection) {
+                HomeView()
+                    .tabItem {
+                        Label("Início", image: selection == .Início ? "Inicio-azul" : "Inicio-cinza")
+                    }.tag(Tabs.Início)
+                
+                EnvironmentView()
+                    .tabItem {
+                        Label("Ambientes", image: selection == .Ambientes ? "Ambientes-azul" : "Ambientes-cinza")
+                    }.tag(Tabs.Ambientes)
+                
+                ProfileView()
+                    .tabItem {
+                        Label("Configurações", image: selection == .Configurações ? "Configuracoes-azul" : "Configuracoes-cinza")
+                    }.tag(Tabs.Configurações)
+                
+                
+            }.accentColor(Color("Azulado-1"))
+                .navigationTitle(selection.rawValue)
         }
-        .padding()
     }
 }
 
